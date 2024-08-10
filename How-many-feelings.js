@@ -23,3 +23,6 @@ If the feeling can be formed several times from different letters - plus one to 
 Each letter in string participates in the formation of all feelings. 
 'angerw' -> 2 feelings: 'anger' and 'awe'.
 */
+
+
+// Solution
