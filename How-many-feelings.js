@@ -47,3 +47,15 @@ const countFeelings = (string, array) => {
 };
 
 // or
+
+const countLetters = (letter) => (word) => (word.match(new RegExp(letter, 'g')) || []).length
+
+function countFeelings(string, array) {
+  const feelings = array
+    .filter(feeling => feeling
+      .split('')
+      .every((letter) => countLetters(letter)(string) >= countLetters(letter)(feeling))
+    ).length;
+    
+    return `${feelings} ${feelings === 1 ? 'feeling.': 'feelings.'}`;
+}
