@@ -26,3 +26,22 @@ Each letter in string participates in the formation of all feelings.
 
 
 // Solution
+
+const countFeelings = (string, array) => {
+  const feelings = [];
+  
+  for (let i = 0; i < array.length; i++) {
+    const val = array[i];
+    const temp = [];
+
+    for (let j = 0; j < val.length; j++) {
+      if (string.search(val[j]) < 0) continue;
+      else temp.push(val[j]);
+    }
+
+    const word = temp.join("");
+    if ( array.includes(word) ) feelings.push(word);
+  }
+
+  return `${feelings.length} ${feelings.length === 1 ? 'feeling' : 'feelings'}.`;
+};
