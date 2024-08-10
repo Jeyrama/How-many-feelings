@@ -29,7 +29,7 @@ Each letter in string participates in the formation of all feelings.
 
 const countFeelings = (string, array) => {
   const feelings = [];
-  
+
   for (let i = 0; i < array.length; i++) {
     const val = array[i];
     const temp = [];
@@ -45,3 +45,5 @@ const countFeelings = (string, array) => {
 
   return `${feelings.length} ${feelings.length === 1 ? 'feeling' : 'feelings'}.`;
 };
+
+// or
